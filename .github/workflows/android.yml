@@ -21,8 +21,8 @@ jobs:
 
     - name: Compilando no Java
       run: |
-        ls
-        javac -sourcepath src Main.java
+        cd src
+        javac -sourcepath . Main.java
       
     - name: Compile and run Java program
       run: java -cp src Main
