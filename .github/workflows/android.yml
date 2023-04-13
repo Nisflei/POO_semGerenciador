@@ -20,7 +20,9 @@ jobs:
         distribution: 'temurin'
 
     - name: Compilando no Java
-      run: javac -sourcepath /src Main.java
+      run: |
+        ls
+        javac -sourcepath src Main.java
       
     - name: Compile and run Java program
       run: java -cp src Main
