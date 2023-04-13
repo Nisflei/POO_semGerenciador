@@ -20,5 +20,5 @@ jobs:
         distribution: 'temurin'
 
     - name: Compile and run Java program
-      run: java -cp target/classes Main
+      run: java -cp Main
 
