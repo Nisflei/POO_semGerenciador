@@ -20,5 +20,5 @@ jobs:
         distribution: 'temurin'
 
     - name: Compile and run Java program
-      run: java -cp out/production/POO_Nativo Main
+      run: java -cp out/production/POO_nativo Main
 
