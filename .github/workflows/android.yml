@@ -18,7 +18,6 @@ jobs:
       with:
         java-version: '11'
         distribution: 'temurin'
-        cache: gradle
 
     - name: Compile and run Java program
       run: java -cp target/classes Main
