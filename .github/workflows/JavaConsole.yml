@@ -23,7 +23,10 @@ jobs:
       run: |
         cd src
         javac -sourcepath . Main.java
-      
+
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
     - name: Compile and run Java program
       run: java -cp src Main
 
