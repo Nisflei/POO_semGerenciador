@@ -25,6 +25,7 @@ jobs:
         javac -sourcepath . Main.java
 
   deploy:
+    needs: build
     runs-on: ubuntu-latest
     steps:
     - name: Compile and run Java program
