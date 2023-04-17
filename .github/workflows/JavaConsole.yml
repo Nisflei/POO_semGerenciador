@@ -24,11 +24,6 @@ jobs:
         cd src
         javac -sourcepath . Main.java
 
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v3
     - name: Compile and run Java program
       run: java -cp src Main
 
