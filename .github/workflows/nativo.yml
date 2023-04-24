@@ -22,4 +22,4 @@ jobs:
         java-version: '11'
         distribution: 'temurin'
     - name: Compilando no JAVA
-      run: javac src/Main.java
+      run: javac -cp src Main.java
