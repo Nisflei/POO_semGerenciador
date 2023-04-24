@@ -1,4 +1,4 @@
-name: Android CI
+name: Java nativo
 
 on:
   push:
@@ -20,8 +20,10 @@ jobs:
         distribution: 'temurin'
 
     - name: Compilando no Java
-      run: javac src/Main.java
-      
+      run: |
+        cd src
+        javac -sourcepath . Main.java
+
     - name: Compile and run Java program
       run: java -cp src Main
 
