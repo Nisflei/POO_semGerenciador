@@ -30,6 +30,12 @@ jobs:
           cd src
           java -cp . Main 
 
+  TESTE:
+    - name: Executando
+      run: |
+        cd src
+        java -cp . Teste.java 
+        
 
 
 
