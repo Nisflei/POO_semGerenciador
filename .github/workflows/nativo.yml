@@ -30,10 +30,6 @@ jobs:
           cd src
           java -cp . Main 
 
-  TESTE:
-    needs: COMPILAR
-    runs-on: ubuntu-latest
-    steps:
     - name: Executando
       run: |
         cd src
