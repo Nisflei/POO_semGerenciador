@@ -31,6 +31,7 @@ jobs:
           java -cp . Main 
 
   TESTE:
+    needs: COMPILAR
     runs-on: ubuntu-latest
     steps:
     - name: Executando
