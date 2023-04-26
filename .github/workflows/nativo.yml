@@ -28,7 +28,12 @@ jobs:
     - name: Rodando o Programa
       run: |
           cd src
-          java -cp . Main 
+          java -cp . Main
+    - name: Ciclo de Teste
+      run: |
+          cd src
+          java -cp . ClassTeste.java
+        
 
         
 
