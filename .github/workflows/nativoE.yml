@@ -32,7 +32,4 @@ jobs:
         cd src
         java Main 
 
-    - name: Install PostgreSQL JDBC driver
-      run: |
-        mkdir -p lib
-        wget https://jdbc.postgresql.org/download/postgresql-42.3.1.jar -O lib/postgresql.jar
+
