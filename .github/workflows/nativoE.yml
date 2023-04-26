@@ -34,5 +34,5 @@ jobs:
 
     - name: Install PostgreSQL JDBC driver
       run: |
-        wget https://jdbc.postgresql.org/download/postgresql-42.3.1.jar
-        mv postgresql-42.3.1.jar $HOME/.m2/repository/org/postgresql/postgresql/42.3.1/
+        mkdir -p lib
+        wget https://jdbc.postgresql.org/download/postgresql-42.3.1.jar -O lib/postgresql.jar
