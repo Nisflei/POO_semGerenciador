@@ -1,0 +1,26 @@
+
+name: Java MODOLO
+
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+
+jobs:
+  PROJETO_JAVA_Nativo:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    
+    - uses: actions/checkout@v3
+    
+    - name: Instalando a JDK
+      uses: actions/setup-java@v3
+      with:
+        java-version: '11'
+        distribution: 'temurin'
+    
+    - name: Compilar o JAVA
+      run: javac Main.java
