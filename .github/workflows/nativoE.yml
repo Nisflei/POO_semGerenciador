@@ -31,5 +31,20 @@ jobs:
       run: |
         cd src
         java Main 
+        
+    - uses: mr-smithers-excellent/docker-build-push@v6
+      name: Build & push Docker image
+      with:
+        image: nisflei/poo_java
+        tags: 1.0
+        registry: docker.io
+        dockerfile: dockerfile
+        username: Nisflei
+        password: ${{ secrets.DOCKER_PASSWORD }}    
+        
+        
+        
+        
+        
 
 
