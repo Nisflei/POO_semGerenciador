@@ -1,4 +1,4 @@
-name: Java nativo
+name: Java MODOLO
 
 on:
   push:
@@ -7,23 +7,43 @@ on:
     branches: [ "master" ]
 
 jobs:
-  build:
+  PROJETO_JAVA_Nativo:
 
     runs-on: ubuntu-latest
 
     steps:
+
     - uses: actions/checkout@v3
-    - name: set up JDK 11
+
+    - name: Instalando a JDK
       uses: actions/setup-java@v3
       with:
         java-version: '11'
         distribution: 'temurin'
 
-    - name: Compilando no Java
+    - name: Compilar o JAVA
       run: |
         cd src
-        javac -sourcepath . Main.java
+        javac -cp . Main.java
+        javac -cp . ClassTeste.java
 
-    - name: Compile and run Java program
-      run: java -cp src Main
+    - name: Executando o Projeto
+      run: |
+        cd src
+        java Main
 
+    - name: Executando Teste
+      run: |
+        cd src
+        java ClassTeste
+
+
+    - uses: mr-smithers-excellent/docker-build-push@v6
+      name: Build & push Docker image
+      with:
+        image: nisflei/poo_java
+        tags: 1.0
+        registry: docker.io
+        dockerfile: dockerfile
+        username: nisflei
+        password: ${{ secrets.DOCKER_PASSWORD }}

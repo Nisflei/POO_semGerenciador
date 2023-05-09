@@ -7,6 +7,7 @@ public class ClassTeste {
         System.out.println("O valor de desconto retornado depois de verificar se é enlatado é: "+teste1.aplicarDesconto());
         System.out.println("O valor de desconto retornado depois de verificar se é uma empresa do grupo e se é carne é: "+teste1.validarEmpresasDoGrupo(new String[]{"Seara", "Flora", "Friboi"}, true));
 
+        System.out.println("TESTE EXECUTADO COM SUCESSO");
         //throw new Exception("Erro normal");
     }
 
